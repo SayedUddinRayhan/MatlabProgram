@@ -1,0 +1,29 @@
+% Cross Correlation
+
+x=input('Enter input sequence');
+h=input('Enter the impulse suquence');
+
+subplot(3,1,1);
+stem(x);
+xlabel('n———>');
+ylabel('x(n)———>');
+title('Input signal');
+
+subplot(3,1,2);
+stem(h);
+xlabel('n———>');
+ylabel('h(n)———>');
+title('Impulse signal','Color','r');
+
+y=xcorr(x,h);
+subplot(3,1,3);
+stem(y);
+xlabel('n———>');
+ylabel('y(n)———>');
+disp('The resultant signal is');
+disp(y);
+title('Correlation signal','Color','g');
+
+
+% enter input sequence [1 2 3 4 5]
+% enter the impulse suquence [1 1 1 1]
